@@ -7,7 +7,7 @@ const NotificationsDropdown = () => {
     {
       id: 1,
       user: "Your Networking Group",
-      text: "is networking event in your area",
+      text: " is networking event in your area",
       time: "1w",
       reactions: 15,
       comments: 2,
@@ -16,7 +16,7 @@ const NotificationsDropdown = () => {
     {
       id: 2,
       user: "Bill Oodleton",
-      text: 'added a new photo: "Happy 3rd anniversary..."',
+      text: ' added a new photo: "Happy 3rd anniversary..."',
       time: "1d",
       unread: true,
     },
@@ -61,7 +61,7 @@ const NotificationsDropdown = () => {
         <div className="dropdown">
           <div className="header">
             <span>Notifications</span>
-            <a href="#">See all</a>
+            {/* <a href="#">See all</a> */}
           </div>
           <div className="notifications-list">
             {notifications.map((notif) => (
