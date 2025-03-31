@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./components/NotificationsDropdown/NotificationsDropdown.css";
 import NotificationsDropdown from "./components/NotificationsDropdown/NotificationsDropdown";
 
 function App() {
