@@ -1,11 +1,16 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import NotificationsDropdown from "./components/NotificationsDropdown/NotificationsDropdown";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div className="navbar">
+          <h1>My App</h1>
+          <NotificationsDropdown />
+        </div>
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
