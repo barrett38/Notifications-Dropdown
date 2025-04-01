@@ -1,3 +1,13 @@
+:root {
+  --Facebook-Blue: #417ecc;
+  --Facebook-Bright-Blue: #1877f2;
+  --Facebook-Gray: #f0f2f5;
+  --Facebook-Text-Gray: #606770;
+  --Facebook-Text-Black: #212327;
+  --Facebook-White: #ffffff;
+  --Facebook-Green: #65b543;
+}
+
 .notifications-container {
   position: relative;
   display: inline-block;
