@@ -1,102 +1,125 @@
-:root {
-  --Facebook-Blue: #417ecc;
-  --Facebook-Bright-Blue: #1877f2;
-  --Facebook-Gray: #f0f2f5;
-  --Facebook-Text-Gray: #606770;
-  --Facebook-Text-Black: #212327;
-  --Facebook-White: #ffffff;
-  --Facebook-Green: #65b543;
-}
-
-.notifications-container {
-  position: relative;
-  display: inline-block;
-}
-
+/* ============================
+   NOTIFICATION ICON & BADGE
+=============================== */
 .notification-icon {
   background: none;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
 }
 
 .badge {
-  background: red;
-  color: white;
-  border-radius: 50%;
-  font-size: 12px;
-  padding: 2px 6px;
   position: absolute;
   top: -5px;
   right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
 
+/* ============================
+   DROPDOWN STYLING
+=============================== */
 .dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
   width: 320px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 1002;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.header {
+/* Header */
+.dropdown .header {
+  padding: 12px 16px;
+  background-color: #f5f6f7;
+  border-bottom: 1px solid #e4e6eb;
+  font-weight: bold;
+  color: #333;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  font-weight: bold;
 }
 
+/* ============================
+   NOTIFICATIONS LIST
+=============================== */
 .notifications-list {
   max-height: 300px;
   overflow-y: auto;
 }
 
+/* Single Item */
 .notification-item {
   display: flex;
-  align-items: center;
-  padding: 10px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
-  transition: background 0.2s;
+  position: relative;
+  transition: background 0.2s ease;
 }
 
 .notification-item:hover {
-  background: #f0f0f0;
+  background-color: #f0f2f5;
 }
 
-.profile-icon {
-  font-size: 20px;
-  margin-right: 10px;
+/* Unread indicator dot */
+.notification-item.unread {
+  background-color: #eef3fb;
 }
 
-.content {
-  flex: 1;
-}
-
-.meta {
-  font-size: 12px;
-  color: gray;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: blue;
+.notification-item .dot {
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  width: 8px;
+  height: 8px;
+  background-color: #1877f2;
   border-radius: 50%;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 320px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+/* Profile Icon */
+.profile-icon {
+  margin-right: 10px;
+  font-size: 20px;
 }
 
-.navbar h1 {
-  margin: 0;
+/* Content */
+.notification-item .content {
+  flex: 1;
+}
+
+.notification-item .user {
+  font-weight: 600;
+  color: #050505;
+  margin-right: 4px;
+}
+
+.notification-item .text {
+  color: #4b4f56;
+}
+
+.notification-item .meta {
+  font-size: 12px;
+  color: #65676b;
+  margin-top: 4px;
+}
+
+/* ============================
+   MOBILE RESPONSIVENESS
+=============================== */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 95vw;
+    right: 2.5vw;
+  }
 }

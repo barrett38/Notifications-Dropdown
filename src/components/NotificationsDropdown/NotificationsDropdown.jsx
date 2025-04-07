@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-// import "./Notifications.css";
+import "./NotificationsDropdown.css";
 
 const NotificationsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
