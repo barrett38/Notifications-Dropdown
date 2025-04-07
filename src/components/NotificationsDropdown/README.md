@@ -2,7 +2,7 @@
 
 ## 📌 Description
 
-Interactive Notifications Bell with a badge to show how many unread notifications the User has.
+Interactive Notifications Bell with a badge to show how many unread notificatioxns the User has.
 
 ## 📖 Installation and Cloning
 
