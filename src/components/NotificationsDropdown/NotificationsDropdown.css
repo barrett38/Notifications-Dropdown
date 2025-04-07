@@ -4,10 +4,13 @@
 .notification-icon {
   background: none;
   border: none;
-  position: relative;
+  position: fixed; /* Change to fixed to keep it at the top-left */
+  top: 10px; /* Adjust the top position */
+  left: 10px; /* Adjust the left position */
   cursor: pointer;
   font-size: 20px;
   color: #fff;
+  z-index: 1001; /* Ensure it's above other elements */
 }
 
 .badge {
@@ -28,7 +31,7 @@
 .dropdown {
   position: absolute;
   top: 45px;
-  right: 0;
+  left: 0; /* Change right to left */
   width: 320px;
   background-color: #fff;
   border-radius: 8px;
@@ -120,6 +123,6 @@
 @media (max-width: 768px) {
   .dropdown {
     width: 95vw;
-    right: 2.5vw;
+    left: 2.5vw; /* Adjust to fit the screen */
   }
 }

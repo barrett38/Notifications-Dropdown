@@ -57,8 +57,8 @@ const NotificationsDropdown = () => {
           src={notificationIcon}
           alt="Notifications"
           style={{
-            width: "40px", // Match the font size of the bell emoji
-            height: "40px", // Keep it square
+            width: "40px",
+            height: "40px",
           }}
         />
         <span className="badge">
@@ -69,7 +69,6 @@ const NotificationsDropdown = () => {
         <div className="dropdown">
           <div className="header">
             <span>Notifications</span>
-            {/* <a href="#">See all</a> */}
           </div>
           <div className="notifications-list">
             {notifications.map((notif) => (
