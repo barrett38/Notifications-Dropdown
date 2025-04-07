@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./NotificationsDropdown.css";
+import notificationIcon from "./pictures/notification.png";
 
 const NotificationsDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,14 @@ const NotificationsDropdown = () => {
   return (
     <div className="notifications-container" ref={dropdownRef}>
       <button className="notification-icon" onClick={toggleDropdown}>
-        🔔{" "}
+        <img
+          src={notificationIcon}
+          alt="Notifications"
+          style={{
+            width: "40px", // Match the font size of the bell emoji
+            height: "40px", // Keep it square
+          }}
+        />
         <span className="badge">
           {notifications.filter((n) => n.unread).length}
         </span>
