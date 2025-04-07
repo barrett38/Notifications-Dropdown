@@ -4,9 +4,9 @@
 .notification-icon {
   background: none;
   border: none;
-  position: fixed; /* Change to fixed to keep it at the top-left */
+  position: fixed; /* Keep it fixed at the top-right */
   top: 10px; /* Adjust the top position */
-  left: 10px; /* Adjust the left position */
+  right: 10px; /* Adjust the right position */
   cursor: pointer;
   font-size: 20px;
   color: #fff;
@@ -31,7 +31,7 @@
 .dropdown {
   position: absolute;
   top: 45px;
-  left: 0; /* Change right to left */
+  right: 0; /* Align dropdown to the right */
   width: 320px;
   background-color: #fff;
   border-radius: 8px;
@@ -123,6 +123,6 @@
 @media (max-width: 768px) {
   .dropdown {
     width: 95vw;
-    left: 2.5vw; /* Adjust to fit the screen */
+    right: 2.5vw; /* Adjust to fit the screen */
   }
 }
